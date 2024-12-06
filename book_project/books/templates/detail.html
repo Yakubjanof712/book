@@ -1,0 +1,10 @@
+{% extends "books/base.html" %}
+{% block title %}{{ book.title }}{% endblock %}
+{% block content %}
+<h1>{{ book.title }}</h1>
+<p><strong>Janr:</strong> {{ book.genre }}</p>
+<p><strong>Nashr sanasi:</strong> {{ book.publication_date }}</p>
+<p><strong>ISBN:</strong> {{ book.isbn }}</p>
+<p>{{ book.summary }}</p>
+<a href="{% url 'home' %}" class="btn btn-primary">Ortga qaytish</a>
+{% endblock %}

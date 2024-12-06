@@ -1,0 +1,17 @@
+{% extends "books/base.html" %}
+{% block title %}Bosh sahifa{% endblock %}
+{% block content %}
+<h1>Kategoriyalar</h1>
+<ul>
+    {% for category in categories %}
+        <li><a href="{% url 'books_by_category' category.id %}">{{ category.name }}</a></li>
+    {% endfor %}
+</ul>
+
+<h2>Kitoblar</h2>
+<ul>
+    {% for book in books %}
+        <li><a href="{% url 'book_detail' book.id %}">{{ book.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
